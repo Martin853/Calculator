@@ -35,3 +35,8 @@ const six = document.querySelector(".six");
 const seven = document.querySelector(".seven");
 const eight = document.querySelector(".eight");
 const nine = document.querySelector(".nine");
+
+// Calculator Values
+let numOne = 0;
+let numTwo = 0;
+let result = 0;
