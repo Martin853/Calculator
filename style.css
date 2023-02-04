@@ -21,6 +21,7 @@ nav h1 {
   margin: 0;
   padding: 1rem 0 1rem 0;
   font-size: 36px;
+  font-weight: bold;
   color: white;
 }
 
@@ -60,8 +61,18 @@ main {
 
 .calculator-functional-button {
   background-color: #7a93ac;
-  font-size: 24px;
-  color: white;
-  margin: 5px 10px 5px 10px;
-  text-align: center;
+  border: 3px solid #171a21;
+  border-radius: 10px;
+  margin: 7px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-functional-button:hover {
+  background-color: #4b6d8f;
+  cursor: pointer;
 }
