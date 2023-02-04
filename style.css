@@ -57,3 +57,11 @@ main {
   margin-right: 10px;
   font-size: 20px;
 }
+
+.calculator-functional-button {
+  background-color: #7a93ac;
+  font-size: 24px;
+  color: white;
+  margin: 5px 10px 5px 10px;
+  text-align: center;
+}
