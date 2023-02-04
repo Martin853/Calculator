@@ -41,6 +41,9 @@ let numOne = 0;
 let numTwo = 0;
 let result = 0;
 let typingFirstNumber = true;
+let firstCommaUsed = false;
+let secondCommaUsed = false;
+let operator;
 
 // Calculator Button Functions
 
@@ -50,11 +53,48 @@ ac.addEventListener("click", function () {
   numOne = "0";
   numTwo = "0";
   result = "0";
+  firstCommaUsed = false;
+  secondCommaUsed = false;
 });
 
 // Equal Button
 equal.addEventListener("click", function () {
-  resultText.textContent = result;
+  if (operator == "+") {
+    result = calculator.add(numOne, numTwo);
+    resultText.textContent = result;
+    numOne = "0";
+    numTwo = "0";
+    result = "0";
+    firstCommaUsed = false;
+    secondCommaUsed = false;
+  }
+  if (operator == "-") {
+    result = calculator.substract(numOne, numTwo);
+    resultText.textContent = result;
+    numOne = "0";
+    numTwo = "0";
+    result = "0";
+    firstCommaUsed = false;
+    secondCommaUsed = false;
+  }
+  if (operator == "*") {
+    result = calculator.multiply(numOne, numTwo);
+    resultText.textContent = result;
+    numOne = "0";
+    numTwo = "0";
+    result = "0";
+    firstCommaUsed = false;
+    secondCommaUsed = false;
+  }
+  if (operator == "/") {
+    result = calculator.divide(numOne, numTwo);
+    resultText.textContent = result;
+    numOne = "0";
+    numTwo = "0";
+    result = "0";
+    firstCommaUsed = false;
+    secondCommaUsed = false;
+  }
 });
 
 // One
@@ -280,6 +320,63 @@ zero.addEventListener("click", function () {
       resultText.textContent = numTwo;
     } else {
       numTwo += "0";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Delete Button
+del.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne[numOne.length - 1] == ".") {
+      firstCommaUsed = false;
+    }
+    if (numOne != "0" && numOne.length > 0) {
+      numOne = numOne.substring(0, numOne.length - 1);
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo[numTwo.length - 1] == ".") {
+      secondCommaUsed = false;
+    }
+    if (numTwo != "0" && numTwo.length > 0) {
+      numTwo = numTwo.substring(0, numTwo.length - 1);
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Plus Minus
+plusMinus.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne != 0) {
+      numOne = parseFloat(numOne);
+      numOne *= -1;
+      numOne.toString();
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo != 0) {
+      numTwo = parseFloat(numTwo);
+      numTwo *= -1;
+      numTwo.toString();
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Comma
+comma.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (firstCommaUsed == false) {
+      numOne += ".";
+      firstCommaUsed = true;
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (secondCommaUsed == false) {
+      numTwo += ".";
+      firstCommaUsed = true;
       resultText.textContent = numTwo;
     }
   }
