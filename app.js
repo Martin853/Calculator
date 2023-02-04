@@ -40,3 +40,247 @@ const nine = document.querySelector(".nine");
 let numOne = 0;
 let numTwo = 0;
 let result = 0;
+let typingFirstNumber = true;
+
+// Calculator Button Functions
+
+// AC Button
+ac.addEventListener("click", function () {
+  resultText.textContent = "0";
+  numOne = "0";
+  numTwo = "0";
+  result = "0";
+});
+
+// Equal Button
+equal.addEventListener("click", function () {
+  resultText.textContent = result;
+});
+
+// One
+one.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "1";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "1";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "1";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "1";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Two
+two.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "2";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "2";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "2";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "2";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Three
+three.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "3";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "3";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "3";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "3";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Four
+four.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "4";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "4";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "4";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "4";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Five
+five.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "5";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "5";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "5";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "5";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Six
+six.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "6";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "6";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "6";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "6";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Seven
+seven.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "7";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "7";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "7";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "7";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Eight
+eight.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "8";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "8";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "8";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "8";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Nine
+nine.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "9";
+      resultText.textContent = numOne;
+    } else {
+      numOne.toString();
+      numOne = numOne + "9";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "9";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo.toString();
+      numTwo = numTwo + "9";
+      resultText.textContent = numTwo;
+    }
+  }
+});
+
+// Zero
+zero.addEventListener("click", function () {
+  if (typingFirstNumber == true) {
+    if (numOne == "0") {
+      numOne = "0";
+      resultText.textContent = numOne;
+    } else {
+      numOne += "0";
+      resultText.textContent = numOne;
+    }
+  } else {
+    if (numTwo == "0") {
+      numTwo = "0";
+      resultText.textContent = numTwo;
+    } else {
+      numTwo += "0";
+      resultText.textContent = numTwo;
+    }
+  }
+});
