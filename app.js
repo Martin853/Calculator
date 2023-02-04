@@ -1,16 +1,32 @@
 // Calculator Functions
 let calculator = {
   add: function (x, y) {
-    return x + y;
+    x = parseFloat(x);
+    y = parseFloat(y);
+    result = x + y;
+    result.toString();
+    return result;
   },
   substract: function (x, y) {
-    return x - y;
+    x = parseFloat(x);
+    y = parseFloat(y);
+    result = x - y;
+    result.toString();
+    return result;
   },
   multiply: function (x, y) {
-    return x * y;
+    x = parseFloat(x);
+    y = parseFloat(y);
+    result = x * y;
+    result.toString();
+    return result;
   },
   divide: function (x, y) {
-    return x / y;
+    x = parseFloat(x);
+    y = parseFloat(y);
+    result = x / y;
+    result.toString();
+    return result;
   },
 };
 
@@ -53,8 +69,10 @@ ac.addEventListener("click", function () {
   numOne = "0";
   numTwo = "0";
   result = "0";
+  typingFirstNumber = true;
   firstCommaUsed = false;
   secondCommaUsed = false;
+  operator = null;
 });
 
 // Equal Button
@@ -65,8 +83,10 @@ equal.addEventListener("click", function () {
     numOne = "0";
     numTwo = "0";
     result = "0";
+    typingFirstNumber = true;
     firstCommaUsed = false;
     secondCommaUsed = false;
+    operator = null;
   }
   if (operator == "-") {
     result = calculator.substract(numOne, numTwo);
@@ -74,8 +94,10 @@ equal.addEventListener("click", function () {
     numOne = "0";
     numTwo = "0";
     result = "0";
+    typingFirstNumber = true;
     firstCommaUsed = false;
     secondCommaUsed = false;
+    operator = null;
   }
   if (operator == "*") {
     result = calculator.multiply(numOne, numTwo);
@@ -83,8 +105,10 @@ equal.addEventListener("click", function () {
     numOne = "0";
     numTwo = "0";
     result = "0";
+    typingFirstNumber = true;
     firstCommaUsed = false;
     secondCommaUsed = false;
+    operator = null;
   }
   if (operator == "/") {
     result = calculator.divide(numOne, numTwo);
@@ -92,8 +116,10 @@ equal.addEventListener("click", function () {
     numOne = "0";
     numTwo = "0";
     result = "0";
+    typingFirstNumber = true;
     firstCommaUsed = false;
     secondCommaUsed = false;
+    operator = null;
   }
 });
 
@@ -380,4 +406,28 @@ comma.addEventListener("click", function () {
       resultText.textContent = numTwo;
     }
   }
+});
+
+// Plus
+plus.addEventListener("click", function () {
+  operator = "+";
+  typingFirstNumber = false;
+});
+
+// Minus
+minus.addEventListener("click", function () {
+  operator = "-";
+  typingFirstNumber = false;
+});
+
+// Multiply
+multiply.addEventListener("click", function () {
+  operator = "*";
+  typingFirstNumber = false;
+});
+
+// Divide
+divide.addEventListener("click", function () {
+  operator = "/";
+  typingFirstNumber = false;
 });
