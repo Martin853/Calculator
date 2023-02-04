@@ -1,3 +1,5 @@
+/* https://coolors.co/171a21-617073-7a93ac-92bcea-afb3f7 */
+
 @import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
 
 * {
@@ -75,4 +77,34 @@ main {
 .calculator-functional-button:hover {
   background-color: #4b6d8f;
   cursor: pointer;
+}
+
+.calculator-number-button {
+  background-color: #92bcea;
+  border: 3px solid #171a21;
+  border-radius: 10px;
+  margin: 7px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-number-button:hover {
+  background-color: #74a8e0;
+  cursor: pointer;
+}
+
+.zero {
+  grid-column-start: span 2;
+}
+
+.equal {
+  background-color: #0b4f6c;
+}
+
+.equal:hover {
+  background-color: #06445f;
 }
