@@ -49,6 +49,7 @@ main {
 .text-box {
   grid-column-start: span 4;
   background-color: rgba(238, 238, 238, 0.85);
+  padding: 10px;
   border: 3px solid #171a21;
   border-radius: 10px;
   margin: 10px;
@@ -58,29 +59,14 @@ main {
 }
 
 .text-box-paragraph {
+  padding: 0;
+  margin: 0;
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .calculator-functional-button {
-  background-color: #a69f98;
-  border: 3px solid #171a21;
-  border-radius: 10px;
-  margin: 7px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.calculator-functional-button:hover {
-  background-color: #928272;
-  cursor: pointer;
-}
-
-.calculator-number-button {
   background-color: #8c6057;
   border: 3px solid #171a21;
   border-radius: 10px;
@@ -93,8 +79,26 @@ main {
   align-items: center;
 }
 
+.calculator-functional-button:hover {
+  background-color: #79524a;
+  cursor: pointer;
+}
+
+.calculator-number-button {
+  background-color: #a69f98;
+  border: 3px solid #171a21;
+  border-radius: 10px;
+  margin: 7px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .calculator-number-button:hover {
-  background-color: #76473e;
+  background-color: #928272;
   cursor: pointer;
 }
 
