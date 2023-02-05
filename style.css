@@ -113,3 +113,7 @@ main {
 .equal:hover {
   background-color: #89e17d;
 }
+
+.ac {
+  grid-column-start: span 2;
+}
