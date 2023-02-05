@@ -57,6 +57,7 @@ let numOne = 0;
 let numTwo = 0;
 let result = 0;
 let typingFirstNumber = true;
+let typingResult = false;
 let firstCommaUsed = false;
 let secondCommaUsed = false;
 let operator;
@@ -354,14 +355,23 @@ zero.addEventListener("click", function () {
 // Delete Button
 del.addEventListener("click", function () {
   if (typingFirstNumber == true) {
+    if (numOne.length == "2" && numOne[0] == "-") {
+      numOne = 0;
+      resultText.textContent = numOne;
+    }
     if (numOne[numOne.length - 1] == ".") {
       firstCommaUsed = false;
     }
     if (numOne != "0" && numOne.length > 0) {
+      console.log("++");
       numOne = numOne.substring(0, numOne.length - 1);
       resultText.textContent = numOne;
     }
   } else {
+    if (numTwo.length == "2" && numTwo[0] == "-") {
+      numTwo = 0;
+      resultText.textContent = numTwo;
+    }
     if (numTwo[numTwo.length - 1] == ".") {
       secondCommaUsed = false;
     }
@@ -378,14 +388,14 @@ plusMinus.addEventListener("click", function () {
     if (numOne != 0) {
       numOne = parseFloat(numOne);
       numOne *= -1;
-      numOne.toString();
+      numOne = numOne.toString();
       resultText.textContent = numOne;
     }
   } else {
     if (numTwo != 0) {
       numTwo = parseFloat(numTwo);
       numTwo *= -1;
-      numTwo.toString();
+      numTwo = numTwo.toString();
       resultText.textContent = numTwo;
     }
   }
