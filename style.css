@@ -104,10 +104,20 @@ main {
 
 .equal {
   background-color: #afd5aa;
+  border: 3px solid #171a21;
+  border-radius: 10px;
+  margin: 7px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .equal:hover {
   background-color: #89e17d;
+  cursor: pointer;
 }
 
 .ac {
