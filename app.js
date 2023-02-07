@@ -17,16 +17,32 @@ const comma = document.querySelector(".comma");
 // Calculator Functions
 const calculator = {
   add: function (x, y) {
-    return x + y;
+    x = parseFloat(x);
+    y = parseFloat(y);
+    let result = x + y;
+    result = result.toString();
+    return result;
   },
   substract: function (x, y) {
-    return x - y;
+    x = parseFloat(x);
+    y = parseFloat(y);
+    let result = x - y;
+    result = result.toString();
+    return result;
   },
   multiply: function (x, y) {
-    return x * y;
+    x = parseFloat(x);
+    y = parseFloat(y);
+    let result = x * y;
+    result = result.toString();
+    return result;
   },
   divide: function (x, y) {
-    return x / y;
+    x = parseFloat(x);
+    y = parseFloat(y);
+    let result = x / y;
+    result = result.toString();
+    return result;
   },
 };
 
@@ -86,5 +102,59 @@ comma.addEventListener("click", function () {
   if (currentValue.includes(".") != true) {
     currentValue += ".";
     resultText.innerHTML = currentValue;
+  }
+});
+
+// Plus
+plus.addEventListener("click", function () {
+  oldValue = currentValue;
+  currentValue = "0";
+  operator = "+";
+});
+
+// Minus
+minus.addEventListener("click", function () {
+  oldValue = currentValue;
+  currentValue = "0";
+  operator = "-";
+});
+
+// Multiply
+multiply.addEventListener("click", function () {
+  oldValue = currentValue;
+  currentValue = "0";
+  operator = "*";
+});
+
+// Divide
+divide.addEventListener("click", function () {
+  oldValue = currentValue;
+  currentValue = "0";
+  operator = "/";
+});
+
+// Equal
+equal.addEventListener("click", function () {
+  switch (operator) {
+    case "+":
+      currentValue = calculator.add(oldValue, currentValue);
+      resultText.innerHTML = currentValue;
+      operator = null;
+      break;
+    case "-":
+      currentValue = calculator.substract(oldValue, currentValue);
+      resultText.innerHTML = currentValue;
+      operator = null;
+      break;
+    case "*":
+      currentValue = calculator.multiply(oldValue, currentValue);
+      resultText.innerHTML = currentValue;
+      operator = null;
+      break;
+    case "/":
+      currentValue = calculator.divide(oldValue, currentValue);
+      resultText.innerHTML = currentValue;
+      operator = null;
+      break;
   }
 });
