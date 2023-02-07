@@ -158,3 +158,29 @@ equal.addEventListener("click", function () {
       break;
   }
 });
+
+// Keyboard
+
+document.addEventListener("keydown", function (e) {
+  if (e.key == "1") {
+    if (currentValue.length < 12) {
+      if (currentValue[0] == "0" && currentValue[1] != ".") {
+        currentValue = "1";
+        resultText.innerHTML = currentValue;
+      } else {
+        currentValue += "1";
+        resultText.innerHTML = currentValue;
+      }
+    } else if (e.key == "2") {
+      if (currentValue.length < 12) {
+        if (currentValue[0] == "0" && currentValue[1] != ".") {
+          currentValue = "2";
+          resultText.innerHTML = currentValue;
+        } else {
+          currentValue += "2";
+          resultText.innerHTML = currentValue;
+        }
+      }
+    }
+  }
+});
