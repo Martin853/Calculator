@@ -6,7 +6,13 @@ const calculatorFunctions = document.querySelectorAll(
 );
 const zero = document.querySelector(".zero");
 const equal = document.querySelector(".equal");
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const multiply = document.querySelector(".multiply");
+const divide = document.querySelector(".divide");
 const ac = document.querySelector(".ac");
+const del = document.querySelector(".del");
+const comma = document.querySelector(".comma");
 
 // Calculator Functions
 const calculator = {
@@ -63,3 +69,16 @@ ac.addEventListener("click", function () {
   operator = null;
   resultText.innerHTML = currentValue;
 });
+
+// Del
+del.addEventListener("click", function () {
+  if (currentValue.length > 1) {
+    currentValue = currentValue.substring(0, currentValue.length - 1);
+    resultText.innerHTML = currentValue;
+  } else {
+    currentValue = "0";
+    resultText.innerHTML = currentValue;
+  }
+});
+
+// Comma
