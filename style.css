@@ -145,3 +145,10 @@ main {
   background-color: #928272;
   cursor: pointer;
 }
+
+@media (max-width: 350px) {
+  .calculator {
+    width: 275px;
+    height: 400px;
+  }
+}
