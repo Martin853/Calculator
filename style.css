@@ -127,3 +127,21 @@ main {
 .del {
   grid-column-start: span 2;
 }
+
+.zero {
+  background-color: #a69f98;
+  border: 3px solid #171a21;
+  border-radius: 10px;
+  margin: 7px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zero:hover {
+  background-color: #928272;
+  cursor: pointer;
+}
