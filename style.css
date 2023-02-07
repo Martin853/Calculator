@@ -146,9 +146,33 @@ main {
   cursor: pointer;
 }
 
+footer {
+  background-color: #171a21;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+@media (max-width: 450px) {
+  .footer-text {
+    font-size: 26px;
+  }
+}
+
 @media (max-width: 350px) {
   .calculator {
     width: 275px;
     height: 400px;
+  }
+
+  .footer-text {
+    font-size: 22px;
   }
 }
