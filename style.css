@@ -102,10 +102,6 @@ main {
   cursor: pointer;
 }
 
-.zero {
-  grid-column-start: span 2;
-}
-
 .equal {
   background-color: #afd5aa;
 }
@@ -115,5 +111,9 @@ main {
 }
 
 .ac {
+  grid-column-start: span 2;
+}
+
+.del {
   grid-column-start: span 2;
 }
