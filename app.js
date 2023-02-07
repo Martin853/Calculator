@@ -41,7 +41,7 @@ let operator;
 numbers.forEach(function (button) {
   button.addEventListener("click", function () {
     if (currentValue.length < 12) {
-      if (currentValue[0] == "0") {
+      if (currentValue[0] == "0" && currentValue[1] != ".") {
         currentValue = button.innerHTML;
         resultText.innerHTML = currentValue;
       } else {
@@ -82,3 +82,9 @@ del.addEventListener("click", function () {
 });
 
 // Comma
+comma.addEventListener("click", function () {
+  if (currentValue.includes(".") != true) {
+    currentValue += ".";
+    resultText.innerHTML = currentValue;
+  }
+});
